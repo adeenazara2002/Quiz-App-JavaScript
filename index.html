@@ -51,7 +51,7 @@
         </div>
         <button class="btn start">Start Quiz</button>
       </div>
-      <div class="quiz">
+      <div class="quiz hide">
         <div class="timer">
           <div class="progress">
             <div class="progress-bar"></div>
@@ -89,11 +89,29 @@
               </div>
           </div>
 
-          <button class="btn submit">Submit</button>
+          <button class="btn submit" disabled>Submit</button>
           <button class="btn next">Next</button>
 
         </div>
+
       </div>
+
+      <div class="end-scren">
+        <h1 class="heading">Quiz App</h1>
+        <div class="score">
+            <div class="score-text">
+                Your Score:
+            </div>
+            <div>
+                <div class="final-score">0</div>
+                <div class="total-score">/10</div>
+
+            </div>
+        </div>
+        <button class="btn restart">Restart Quiz</button>
+      </div>
+      </div>
+      
 
     <script src="app.js"></script>
   </body>
