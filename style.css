@@ -148,4 +148,23 @@ select{
     justify-content: space-between;
     margin-bottom: 20px;
     cursor: pointer;
+    transition: 0.3 linear;
+}
+
+.answer .checkbox{
+   width: 20px;
+   height: 20px;
+   font-size: 12px;
+   border-radius: 50%;
+   border: 3px solid #3f4868;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s;
+
+}
+
+.answer:hover .checkbox{
+    background-color: #0a6bc5;
+    border-color: #0c80ef;
 }

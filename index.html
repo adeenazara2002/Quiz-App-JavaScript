@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUIZ-APP</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-
-</head>
-<body>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <div class="start-screen hide">
-            <h1 class="heading">Quiz App</h1>
-            <div class="settings">
-                <label for="num-questions">Number of Questions</label>
-                <select name="" id="num0questions">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
+      <div class="start-screen hide">
+        <h1 class="heading">Quiz App</h1>
+        <div class="settings">
+          <label for="num-questions">Number of Questions</label>
+          <select name="" id="num0questions">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+          </select>
 
-                </select>
+          <label for="category">Select category</label>
+          <select name="" id="category">
+            <option value="">any category</option>
+            <option value="9">Python</option>
+            <option value="10">Dart</option>
+            <option value="11">Flutter</option>
+            <option value="12">JavaScript</option>
+            <option value="13">Typescript</option>
+          </select>
 
-                <label for="category">Select category</label>
-                <select name="" id="category">
-                    <option value="">any category</option>
-                    <option value="9">Python</option>
-                    <option value="10">Dart</option>
-                    <option value="11">Flutter</option>
-                    <option value="12">JavaScript</option>
-                    <option value="13">Typescript</option>
+          <label for="difficulty">Select difficulty</label>
+          <select name="" id="difficulty">
+            <option value="">any difficulty</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
 
-                </select>
-
-                <label for="difficulty">Select difficulty</label>
-                <select name="" id="difficulty">
-                    <option value="">any difficulty</option>
-                    <option value="easy">easy</option>
-                    <option value="medium">medium</option>
-                    <option value="hard">hard</option>
-                </select>
-
-                <label for="time">Select time per question</label>
-                <select name="" id="time">
-                    <option value="10">10 seconds</option>
-                    <option value="15">15 seconds</option>
-                    <option value="20">20 seconds</option>
-                    <option value="25">25 seconds</option>
-                    <option value="30">30 seconds</option>
-                    <option value="60">60 seconds</option>
-
-                </select>
-            </div>
-            <button class="btn start">Start Quiz</button>
+          <label for="time">Select time per question</label>
+          <select name="" id="time">
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="25">25 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>
         </div>
-        <div class="quiz">
-            <div class="timer">
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                    <span class="progress-text">50</span>
-                </div>
-                </div>
-                <div class="question-wrapper">
-                    <div class="number">
-                      Question <span class="current">1</span><span class="total">/10</span> 
-                    </div>
-                    <div class="question">This is a Question</div>
-                    <div class="answer-wrapper">
-                        <div class="answer">
-                            <span class="text">answer</span>
-                            <span class="checkbox"></span>
-                        </div>
-                    </div>
-                </div>
+        <button class="btn start">Start Quiz</button>
+      </div>
+      <div class="quiz">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text">50</span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span
+            ><span class="total">/10</span>
+          </div>
+          <div class="question">This is a Question</div>
+          <div class="answer-wrapper">
+            <div class="answer">
+              <span class="text">answer</span>
+              <span class="checkbox">✓</span>
             </div>
+          </div>
 
+<!-- 
+          <div class="answer-wrapper">
+            <div class="answer">
+              <span class="text">answer</span>
+              <span class="checkbox">✓</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
     </div>
-    
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
