@@ -30,13 +30,24 @@ const startQuiz = () => {
     const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${diff}&type=multiple`;
 
     fetch(url).then((res) => res.json())
-    .then((date) => {
+    .then((data) => {
         questions=data.results;
-        console.log(questions);
-        
-    });
+        startscreen.classList.add("hide");
+        quiz.classList.remove("hide");
+        currentQuestion = 1;
+        showQuestion(questions[0]);
 
+    });
+};
+
+startBtn.addEventListener("click" , startQuiz);
+const showQuestion = (question) => {
+    const questionText = document.querySelector(".question"),
+    answersWrapper = document.querySelector(".answer-wrapper"),
+    questionNumber = document.querySelector(".number");
+    questionText.innerHTML = question.question;
 }
+
 
 
 
