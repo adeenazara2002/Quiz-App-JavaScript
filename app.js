@@ -46,6 +46,28 @@ const showQuestion = (question) => {
     answersWrapper = document.querySelector(".answer-wrapper"),
     questionNumber = document.querySelector(".number");
     questionText.innerHTML = question.question;
+
+    const answers = [...question.incorrect_answers, question.correct_answer.toString(),
+    ];
+
+    answers.sort(() => Math.random() - 0.5);
+    answersWrapper.innerHTML = "";
+    answers.forEach((answer) => {
+        answersWrapper.innerHTML += `
+        <div class="answer ">
+                <span class="text">${answer}</span>
+                <span class="checkbox">
+                  <span class="icon">✓</span>
+                </span>
+              </div>
+        `
+    });
+
+    questionNumber.innerHTML = `
+    Question <span class="current">${questions.indexOf(question) +1
+
+    }</span><span class="total">${questions.length}</span>
+    `;
 }
 
 
