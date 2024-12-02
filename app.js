@@ -95,8 +95,28 @@ const showQuestion = (question) => {
 
 const startTimer = (time) => {
     timer = setInterval(() => {
+       if (timer > 0) {
+         progress(time);
+         time--;
+       }else{
+        checkAnswer();
+       }
+    }, 1000);
+};
 
-    }, interval);
+submitBtn.addEventListener("click" , () => {
+    checkAnswer();
+});
+
+
+
+const checkAnswer = () => {
+   clearInterval(timer);
+
+   const selectedAnswer = document.querySelector(".answer.selected");
+   if (selectedAnswer) {
+     const answer = selectedAnswer.querySelector(".text");
+   }
 }
 
 
